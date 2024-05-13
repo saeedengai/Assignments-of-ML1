@@ -23,7 +23,8 @@ def get_page():
 		sys.exit(1)
 
 	# Code here - Call get method in requests object, pass url and collect it in res
-	res = requests.get(url)
+	headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+	res = requests.get(url, headers=headers)
 	# Code ends here
 
 	res.raise_for_status()
